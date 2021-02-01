@@ -1,0 +1,47 @@
+.title {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    letter-spacing: 0.02rem;
+    color: var(--color-tertiary-dark3);
+}
+
+.hello {
+    font-size: 56px;
+    line-height: 1.5;
+    letter-spacing: 0.05rem;
+    color: var(--color-yellow-dark3);
+    font-family: 'Shadows Into Light', cursive;
+    text-shadow: 0 0 50px hsla(0, 0%, 0%, 0.4);
+}
+
+@media (min-width: 1900px) {
+    .hello {
+        font-size: 100px !important;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 950px) {
+    .hello {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 540px) {
+    .title {
+        font-size: 13px;
+        line-height: 22px;
+    }
+
+    .hello {
+        font-size: 38px;
+        line-height: 52px;
+    }
+}

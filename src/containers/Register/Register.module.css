@@ -1,0 +1,96 @@
+.formBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 138px;
+    position: relative;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 750px;
+    height: 500px;
+    background-color: var(--color-tertiary-main);
+    box-shadow: 0 15px 35px hsla(0, 0%, 0%, 0.2);
+    margin: 70px 0;
+    border-radius: 20px;
+}
+
+.error {
+    width: 90%;
+    border: 3px solid var(--color-red-dark);
+    padding: 20px;
+    background-color: rgba(var(--color-red-dark3), .2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -3%;
+    left: 5%;
+    border-radius: 20px;
+}
+
+.errorMessage {
+    text-align: center;
+    color: var(--color-red-dark);
+    letter-spacing: .2px;
+}
+
+.errorMessage span {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.showError {
+    animation: error .4s ease-in-out forwards;
+} 
+
+@keyframes error {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (min-width: 2200px) {
+    .form {
+        width: 1600px;
+        height: 800px;
+        margin: 150px 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .form {
+        width: 480px;
+    }
+}
+
+@media (max-width: 767px) {
+    .formBox {
+        padding-bottom: 150px;
+    }
+}
+
+@media (max-width: 620px) {
+    .form {
+        width: 380px;
+    }
+}
+
+@media (max-width: 425px) {
+    .form {
+        width: 270px;
+    }
+}
+    

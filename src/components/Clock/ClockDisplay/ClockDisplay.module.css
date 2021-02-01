@@ -1,0 +1,157 @@
+.clock {
+    font-size: 26.25px;
+    font-weight: 700;
+    letter-spacing: 1.25px;
+}
+
+.background {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color:rgba(var(--color-white), .5)
+}
+
+.winBox {
+    background-color: rgba(var(--color-yellow-light-3), .85);
+    width: 875px;
+    height: 625px;
+    border-radius: 62.5px;
+    box-shadow: 8px 8px 5px 0px rgba(var(--color-black),0.75);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 81.25px;
+    letter-spacing: 1.5px;
+}
+
+.info {
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
+.timeResult {
+    font-size: 50px;
+    letter-spacing: 1px;
+    color: var(--color-yellow-dark-3);
+}
+
+.popupEffect {
+    animation: bgEffect .4s linear alternate 1;  
+} 
+
+@keyframes bgEffect {
+    0% {transform: scale(.3);}
+    
+    75% {transform: scale(1.2);}
+    
+    100% {transform: scale(1);}
+} 
+
+.hide {
+    animation: bgEffectOut .3s linear forwards;
+}
+
+@keyframes bgEffectOut {
+    0% {
+        transform: translateX(0%);
+    }
+    
+    100% {
+        transform: translateX(-120%);
+    }
+} 
+
+@media (min-width: 2200px) {
+    .clock {
+        font-size: 50px;
+    }
+
+    .winBox {
+        width: 1600px;
+        height: 1000px;
+    }
+
+    .text {
+        font-size: 140px;
+        margin-bottom: 50px;
+    }
+
+    .info {
+        margin-bottom: 50px;
+        font-size: 45px;
+    }
+
+    .timeResult {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 900px) {
+    .winBox {
+        width: 600px;
+    }
+}
+
+@media (max-width: 740px) {
+    .winBox {
+        width: 500px;
+        margin-top: 20px;
+    }
+
+    .background {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 540px) {
+    .clock {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 540px) {
+    .info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info > span {
+        margin-top: 15px;
+    }
+
+    .timeResult {
+        margin-top: 15px;
+    }
+
+    .winBox {
+        width: 80%
+    }
+}
+
+@media (max-width: 425px) {
+    .text {
+        font-family: 'Shadows Into Light', cursive;
+        font-size: 45px;
+        letter-spacing: 1px;
+    }
+
+    .info {
+        font-size: 16px;
+    }
+
+    .timeResult {
+        font-size: 30px;
+    }
+}

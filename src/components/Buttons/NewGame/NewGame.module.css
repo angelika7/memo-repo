@@ -1,0 +1,48 @@
+.button {
+    height: 93px;
+    width: 780px;
+    background-color: var(--color-light-dark-3);
+    border-radius: 100px;
+    color: hsl(120, 2%, 48%);
+    border: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 00.05rem;
+    transition: all .3s;
+    
+}
+
+.button:hover, .button.Active {
+    cursor: pointer;
+    background-color: var(--color-black-main);
+}
+
+@media (min-width: 2200px) {
+    .button {
+        height: 120px;
+        width: 1200px;
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .button {
+        width: 500px;
+    }
+}
+
+@media (max-width: 540px) {
+    .button {
+        height: 60px;
+        width: 300px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 375px) {
+    .button {
+        width: 270px;
+        font-size: 14px;
+    }
+}

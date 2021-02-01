@@ -1,0 +1,75 @@
+.boardEasy {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 156px);
+    margin: 30px 0;
+    gap: 15px;
+    box-shadow: 0 15px 35px hsla(0, 0%, 0%, 0.2);
+    background-color: var(--color-light-light3);
+}
+
+.boardHard {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 140px);
+    margin: 30px 0;
+    gap: 15px;
+    box-shadow: 0 15px 35px hsla(0, 0%, 0%, 0.2);
+    background-color: var(--color-light-light3);
+}
+
+@media (min-width: 2200px) {
+    .boardEasy {
+        grid-template-rows: repeat(3, 300px);
+    }
+
+    .boardHard {
+        grid-template-rows: repeat(4, 270px);
+    }
+}
+
+@media (max-width: 540px) {
+    .boardEasy {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 125px);
+        gap: 10px;
+    }
+
+    .boardHard {
+        height: max-content;
+        gap: 5px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 100px);
+    }
+
+}
+
+@media (max-width: 425px) {
+    .boardEasy {
+        grid-template-rows: repeat(3, 110px);
+        gap: 10px;
+    }
+
+    .boardHard {
+        grid-template-rows: repeat(4, 90px);
+    }
+
+}
+
+.showMemo {
+    animation: goInMemo .2s ease-in-out forwards;
+} 
+
+@keyframes goInMemo {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

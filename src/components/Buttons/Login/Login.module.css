@@ -1,0 +1,48 @@
+.button {
+    height: 75px;
+    width: 625px;
+    background-color: var(--color-yellow-dark1);
+    border-radius: 100px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.75px;
+    box-shadow: 0 4px 6px hsla(0, 0%, 0%, .2);
+    color: var(--color-yellow-light1);
+    transition: all .3s;
+    margin-top: 30px;
+}
+
+.button:hover, .button.Active {
+    cursor: pointer;
+    background-color: var(--color-yellow-dark3);
+    outline: none;
+}
+
+@media (min-width: 2200px) {
+    .button {
+        height: 110px;
+        width: 1000px;
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .button {
+        width: 420px;
+    }
+}
+
+@media (max-width: 620px) {
+    .button {
+        width: 300px;
+    }
+}
+
+@media (max-width: 425px) {
+    .button {
+        width: 210px;
+        font-size: 10px;
+    }
+}
