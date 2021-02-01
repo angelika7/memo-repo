@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/memo-repo/static/css/main.af990b6a.chunk.css",
+    "main.js": "/memo-repo/static/js/main.a4a021aa.chunk.js",
+    "main.js.map": "/memo-repo/static/js/main.a4a021aa.chunk.js.map",
+    "runtime-main.js": "/memo-repo/static/js/runtime-main.48e84d82.js",
+    "runtime-main.js.map": "/memo-repo/static/js/runtime-main.48e84d82.js.map",
+    "static/js/2.0569602d.chunk.js": "/memo-repo/static/js/2.0569602d.chunk.js",
+    "static/js/2.0569602d.chunk.js.map": "/memo-repo/static/js/2.0569602d.chunk.js.map",
+    "index.html": "/memo-repo/index.html",
+    "static/css/main.af990b6a.chunk.css.map": "/memo-repo/static/css/main.af990b6a.chunk.css.map",
+    "static/js/2.0569602d.chunk.js.LICENSE.txt": "/memo-repo/static/js/2.0569602d.chunk.js.LICENSE.txt",
+    "static/media/11.5a334c1c.jpg": "/memo-repo/static/media/11.5a334c1c.jpg",
+    "static/media/12.aa231b64.jpg": "/memo-repo/static/media/12.aa231b64.jpg",
+    "static/media/4.49d3b546.jpg": "/memo-repo/static/media/4.49d3b546.jpg",
+    "static/media/Memo.module.css": "/memo-repo/static/media/cat-black.5049f10c.svg",
+    "static/media/cat4.271974ef.svg": "/memo-repo/static/media/cat4.271974ef.svg",
+    "static/media/cat5.936c532f.svg": "/memo-repo/static/media/cat5.936c532f.svg",
+    "static/media/cats.f547f19e.svg": "/memo-repo/static/media/cats.f547f19e.svg",
+    "static/media/close2.486d740d.svg": "/memo-repo/static/media/close2.486d740d.svg",
+    "static/media/medal1.13337313.svg": "/memo-repo/static/media/medal1.13337313.svg",
+    "static/media/medal2.ea8a8568.svg": "/memo-repo/static/media/medal2.ea8a8568.svg",
+    "static/media/MemoItem.css": "/memo-repo/static/media/paw.7c37a94e.svg",
+    "static/media/watch.328b689e.svg": "/memo-repo/static/media/watch.328b689e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.48e84d82.js",
+    "static/js/2.0569602d.chunk.js",
+    "static/css/main.af990b6a.chunk.css",
+    "static/js/main.a4a021aa.chunk.js"
+  ]
+}
