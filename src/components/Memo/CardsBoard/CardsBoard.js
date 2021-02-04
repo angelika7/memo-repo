@@ -1,17 +1,23 @@
 import cards from '../Cards/Cards';
+import cloneDeep from 'lodash/cloneDeep';
 
 const generateCards = (squareNum = 6) => {
 
   const allCards = [...cards].sort(() => .5 - Math.random());
   const myCards = allCards.slice(0,squareNum);
-  const myCards2 = [...myCards];
-  const gameCards = myCards.concat(myCards2).sort(() => .5 - Math.random());
-  console.log(gameCards)
-  
-  /* const sortCards = [...cards].sort(() => .5 - Math.random());
+  const gameCardsClone = cloneDeep(myCards);
+  const allGameCards = myCards.concat(gameCardsClone).sort(() => .5 - Math.random());
+  console.log(allGameCards)
+
+  return allGameCards
+}   
+
+/* const generateCards = (squareNum = 6) => {
+  let randomCards = []
+  const sortCards = cards.sort(() => .5 - Math.random());
 
   for (let i = 0; i < squareNum * 2; i++) {
-    let randomCard = null;
+    let randomCard
 
     do {
       randomCard = sortCards[Math.floor(Math.random() * squareNum)]
@@ -20,9 +26,9 @@ const generateCards = (squareNum = 6) => {
     )
 
     randomCards.push(Object.assign({}, randomCard))
-  } */
+  }
 
-  return gameCards
-}  
+  return randomCards
+}   */
 
 export default generateCards

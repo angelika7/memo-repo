@@ -19,7 +19,7 @@ class Memo extends Component {
         isEasy: true,
         startGame: false,
         watchRunning: false,
-        showLevels: true,
+        showGameLevels: true,
         newGame: false,
         endGame: false,
         selectedTabId: 1
@@ -49,7 +49,7 @@ class Memo extends Component {
                 return false
             }
 
-            const flippedCards = this.flipCards(cards, [clickedIndex])
+            const flippedCards = this.flipCards(clickedIndex)
 
             this.setState({cards: flippedCards})
 
@@ -105,16 +105,31 @@ class Memo extends Component {
         })
     }
 
-    flipCards = (cards, cardsIndexes) => {
+    /* flipCards = (cards, cardsIndexes) => {
         for(let i = 0; i < cardsIndexes.length; i++) {
-            cards[cardsIndexes[i]].flipped = !cards[cardsIndexes[i]].flipped
+            cards[cardsIndexes].flipped = !cards[cardsIndexes].flipped
         }
-        return cards
-    }
+        return cards 
+    } */
 
     isSolved = (element, index, array) => {
         return (element.solved)
     } 
+    flipCards = (id) => {
+        this.setState(({cards}) =>
+            ({
+                cards: cards.map((card, i) =>
+                    card[i] === id ?  ({
+                      ...card,
+                      flipped: true
+                    }) : card
+                )
+            })
+        )   
+        
+         
+    } 
+
 
     //Control game functions
     startGame = () => {
@@ -131,7 +146,6 @@ class Memo extends Component {
         watchRunning: false,
         startGame: false,
         endGame: false,
-        //cards: generateCards(6),
         isEasy: true,
         selectedTabId: 1
         })
@@ -151,7 +165,8 @@ class Memo extends Component {
     }
     
     render() {
-        const { cards, startGame, showLevels } = this.state;
+        const { cards, startGame, newGame, isEasy, showLevels, endGame, showGameLevels, watchRunning } = this.state;
+
         let levels = null;
         let readyGame = null;
         let buttons = [
@@ -194,12 +209,12 @@ class Memo extends Component {
             readyGame = (
                 <React.Fragment>
                     <div className={[classes.clockBox, classes.showClock].join(' ')}>
-                        {this.state.isEasy ? <p className={classes.gameLevelText} style={{fontSize: '18px'}}><span style={{color: 'var(--color-black-dark3)'}}>Poziom:</span> Łatwy</p> : <p className={classes.GameLevelText} style={{fontSize: '18px'}}><span style={{color: 'var(--color-black-dark3)'}}>Poziom:</span> Trudny</p>}
+                        {isEasy ? <p className={classes.gameLevelText} style={{fontSize: '18px'}}><span style={{color: 'var(--color-black-dark3)'}}>Poziom:</span> Łatwy</p> : <p className={classes.GameLevelText} style={{fontSize: '18px'}}><span style={{color: 'var(--color-black-dark3)'}}>Poziom:</span> Trudny</p>}
                         <img className={classes.clock} src={watch} alt=''/>
-                        <Clock newGame={this.state.newGame} endGame={this.state.endGame} level={this.state.isEasy}/>
+                        <Clock newGame={newGame} endGame={endGame} level={isEasy}/>
                     </div>
                     <div className={classes.box}>
-                        <MemoBuilder isEasy={this.state.isEasy}>
+                        <MemoBuilder isEasy={isEasy}>
                             {cards.map((card, i) => {
                                 return <MemoItem
                                     key={i}
@@ -216,11 +231,11 @@ class Memo extends Component {
 
         return (
             <div className={classes.content}>
+                <div className={classes.btnBox}>
+                    <NewGame startGame={this.startGame} newGame={this.newGame} showLevels={showGameLevels} watch={watchRunning}/>
+                </div>
                 {levels}
                 {readyGame}
-                <div className={classes.btnBox}>
-                    <NewGame startGame={this.startGame} newGame={this.newGame} showLevels={this.state.showLevels} watch={this.state.watchRunning}/>
-                </div>
             </div>
         )
     }

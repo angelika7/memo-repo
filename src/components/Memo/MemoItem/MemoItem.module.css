@@ -40,7 +40,7 @@
     content: '';
     mask-image: url(./../../../assets/images/paw.svg);
     mask-size: cover;
-    background-color: rgb(var(--color-gray));
+    background-color: black;
     height: 40px;
     width: 40px; 
     display: inline-block;
