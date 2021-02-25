@@ -51,7 +51,7 @@ Have fun! 😃
 
 1. Run the project
    ```sh
-   npm clone start
+   npm start
    ```
 2. Run tests
    ```sh
